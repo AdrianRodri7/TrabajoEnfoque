@@ -1,0 +1,163 @@
+
+
+  body {
+    background-image: url("imagenes/fondo.jpg");
+    background-color: black;
+    
+  }
+
+  nav {
+    background: rgb(58, 34, 34);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0px rgba(245, 3, 3, 0.1);
+    color:aquamarine;
+}
+
+div ul{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+ 
+}
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  div table{
+    
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+  }
+
+  
+  p {
+    text-align: center;
+  }
+ 
+  
+
+
+li {
+  position: relative;
+  align-content: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius: 5%;
+  text-decoration: none;
+}
+
+li a:hover {
+  
+  background-color: #0ae9b1;
+}
+
+.imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrusel {
+  position:relative;
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carrusel img {
+  width: 100%;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px;
+}
+.carrusel img.active {
+  display:flex;
+}
+.carrusel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mapa{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+table{
+  border: 3px solid;
+  border-color:aqua;
+  margin: 0 auto;
+}
+th{
+  border: 3px solid;
+  border-color:rgb(166, 255, 0);
+}
+td{
+  border: 3px solid;
+  border-color: aqua;
+}
+
+ p a{
+  text-align: center;
+ }
+
+ .infotech{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ footer a{
+  margin-left: 20%;
+ }
+
+ .facebook{
+  width: 50px;
+  height: 50px;
+}
+
+.twitter{
+  width: 50px;
+  height: 50px;
+}

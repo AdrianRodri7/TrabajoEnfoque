@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>InfoTech</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" media="screen">
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 id="arriba">InfoTech</h1>
+            <div>
+                <ul>
+                    <li><a href="#quien">¿Quiénes somos?</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#trabaja">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <h2 id="quien">¿Quiénes somos?</h2>
+    <p>Somos una pequeña empresa dedicada al mundo de la informática, desde reparaciones hasta montaje de equipos personalizados.<br>
+         Aqui os detallamos un poco la gente que esta en nuestra empresa con un video del proceso de ensamblaje automatico de equipos.</p>
+
+    <!--Imagenes para el carrusel-->
+    <div class="imagenes">
+        <div class="carrusel">
+            <button class="prev" onclick="prevImage()">&#10094;</button>
+            <img src="imagenes/henry.jpg" class="active" alt="henry">
+            <img src="imagenes/sydney.jpg" alt="sydney">
+            <img src="imagenes/pedro.jpg" alt="pedro">
+            <button class="next" onclick="nextImage()">&#10095;</button>
+        </div>
+    </div>
+
+    <!--Scrip para añadir el movimiento del carrusel de imagenes-->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".carrusel img");
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle("active", i === index);
+            });
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            showImage(currentIndex);
+        }
+    </script>
+
+    <!--Video coorporativo-->
+    <div class="infotech">
+        <video width="600" controls>
+            <source src="imagenes/infotech.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML.
+        </video>
+    </div><br>
+    <p><a href="#arriba">Volver al indice</a></p>
+
+    <h2 id="servicios">Servicios</h2>
+
+    <!--Tabla con imagenes de servicios realizados-->
+    <div>
+        <table class="tabla">
+            <tbody>
+                <tr>
+                    <td colspan="2">Cambio de RAM</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><img src="imagenes/ram.jpg" height="500" width="1500" alt="Cambio de RAM"></td>
+                </tr>
+                <tr>
+                    <td>Reparación de mandos</td>
+                    <td>Reparación de ordenadores</td>
+                </tr>
+                <tr>
+                    <td><img src="imagenes/mando.jpg" height="400" width="700" alt="Reparación de mandos"></td>
+                    <td><img src="imagenes/pasta.webp" height="400" width="700" alt="Reparación de ordenadores"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Arreglo de consolas</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><img src="imagenes/ps5.jpg" height="400" width="1500" alt="Arreglo de consolas"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div><br>
+
+
+    <p><a href="#arriba">Volver al indice</a></p>
+    
+    <h2 id="contacto">Contacto</h2>
+    <p>Para más información, contáctenos al teléfono +34 647986478 o visítenos en el 742 de Evergreen Terrace (Springfield).</p>
+
+    
+
+    <!--Incrustado google maps a pagina inicio-->
+    <div class="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101719.37050095022!2d-93.37826700709877!3d37.18287923930681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf62f745c8983f%3A0x6bfd6cb31e690da0!2sSpringfield%2C%20Misuri%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1741084969319!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
+    </div>
+    <!--Formulario de contacto-->
+    <div style="display:inline-block; justify-content: start;">
+        <form method="get" action="#">
+            Nombre:<br>
+            <input type="text" name="nombre" id="nombre" required><br>
+            Correo electrónico:<br>
+            <input type="email" name="email" id="email" required><br>
+            Número móvil:<br>
+            <input type="number" name="numero" id="numero" max="999999999" required><br>
+            Comentarios:<br>
+            <textarea id="comentarios" placeholder="Aqui nos puede indicar lo que desee..." cols="60" rows="5"></textarea><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Resetear">
+        </form>
+    </div>
+    <p><a href="#arriba">Volver al indice</a></p>
+    
+    <h2 id="trabaja">Trabaja con nosotros</h2>
+
+    <!--Formulario datos personales-->
+    <form method="get" action="#">
+        <fieldset>
+            <legend>Datos personales</legend>
+            Nombre<br>
+            <input type="text" name="nombre" id="datonombre"><br>
+            Apellidos<br>
+            <input type="text" name="apellidos" id="apellidos"><br>
+            DNI<br>
+            <input type="text" name="dni" id="dni"><br>
+            Sexo<br>
+            <input type="radio" name="sexo" id="sexo-hombre" value="si" checked>Hombre
+            <input type="radio" name="sexo" id="sexo-mujer" value="no">Mujer
+            <input type="radio" name="sexo" id="sexo-sin" value="no"> Sin especificar<br>
+            Fecha de nacimiento<br>
+            <input type="date" name="nacimiento" id="nacimiento"><br>
+            Ciudad<br>
+            <input type="text" name="ciudad" id="ciudad"><br>
+            Pais<br>
+            <input type="text" name="pais" id="pais"><br>
+            Codigo postal<br>
+            <input type="number" name="postal" id="postal"><br>
+            Correo electronico<br>
+            <input type="email" name="email" id="email1" pattern=".+@example\.com" size="30" required>
+        </fieldset>
+
+        <!--Formulario de formacion-->
+        <fieldset>
+            <legend>Formación</legend>
+            Titulación<br>
+            <input type="text" name="titulo" id="titulo" required>
+            Inicio titulo
+            <input type="date" name="iniciotitulo" id="iniciotitulo" required>
+            Fin titulo
+            <input type="date" name="fintitulo" id="fintitulo" required><br>
+            Segunda titulación<br>
+            <input type="text" name="titulo" id="titulo1">
+            Inicio titulo
+            <input type="date" name="iniciotitulo" id="iniciotitulo1">
+            Fin titulo
+            <input type="date" name="fintitulo" id="fintitulo1">
+        </fieldset>
+
+        <!--Formulario de idiomas-->
+        <fieldset>
+            <legend>Idiomas</legend>
+            Idioma<br>
+            <input type="text" name="idioma" id="idioma"><br>
+            Hablado
+            <select name="hablado" id="hablado">
+                <option value="excelente">Excelente</option>
+                <option value="bien">Bien</option>
+                <option value="regular">Regular</option>
+                <option value="nada">Nada</option>
+            </select><br>
+            Leído
+            <select name="leido" id="leido">
+                <option value="excelente">Excelente</option>
+                <option value="bien">Bien</option>
+                <option value="regular">Regular</option>
+                <option value="nada">Nada</option>
+            </select><br>
+            Escrito
+            <select name="escrito" id="escrito">
+                <option value="excelente">Excelente</option>
+                <option value="bien">Bien</option>
+                <option value="regular">Regular</option>
+                <option value="nada">Nada</option>
+            </select><br><br>
+            <input type="submit" value="Enviar formulario">
+            <input type="reset" value="Resetear formulario">
+        </fieldset>
+    </form>
+
+    <p><a href="#arriba">Volver al indice</a></p>
+    
+    <!--Pie de pagina-->
+    <footer>
+        <div>
+            <h3>También puedes visitarnos en:</h3>
+            <a href="https://www.facebook.com" target="_blank"><img src="imagenes/facebook.png" alt="Facebook" class="facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="imagenes/twitter.png" alt="Twitter" class="twitter"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
